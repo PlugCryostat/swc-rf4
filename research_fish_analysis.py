@@ -22,7 +22,7 @@ def import_xls_to_df(filename, name_of_sheet):
     return pd.read_excel(filename,sheetname=name_of_sheet)
 
 
-def add_column5(dataframe,newcol):
+def add_column(dataframe,newcol):
     """
     Adds a new column of NaNs called newcol
     :params: a dataframe and column name
@@ -247,7 +247,7 @@ def main():
 
     logger.info('Raw dataframe length before any processing: ' + repr(len(df)))
 
-    add_column5(df,'URL status')
+    add_column(df,'URL status')
 
     df47 = clean_data2(df,'Year First Provided')
     
